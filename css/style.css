@@ -1,5 +1,18 @@
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+
+:root {
+  --white: #ffffff;
+  --black: #171717;
+  --grey: #525252;
+  --linear: linear-gradient(#f9fafb, #d2d6db);
+
+  --text-sm: .875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+}
+
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -10,10 +23,56 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  background-image: var(--linear);
 }
 
+
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.card__container {
+  width: 340px;
+  height: 233px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 24px;
+  color: var(--black);
+}
+
+.card__profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.right {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+.username {
+  font-size: var(--text-sm);
+  color: var(--grey)
+}
+
+.comment {
+  font-size: var(--text-base);
 }
 
 .credits {
